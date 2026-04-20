@@ -88,13 +88,14 @@
               <v:textbox inset="0,0,0,0">
             <![endif]-->
 
-            <!-- Hero for non-Outlook clients: real <img> as bg + overlay text in table -->
-            <table role="presentation" width="600" border="0" cellpadding="0" cellspacing="0" style="width:600px;background-color:#0a3b5c;background-image:url('https://usfq-galapagos.github.io/proyectos2026/galapagos_summer/assets/photos/sailing-duo.jpeg');background-size:cover;background-position:center;">
+            <!-- Hero bg: HTML `background` attr on <td> + CSS background-image. Outlook Mac/Web
+                 ignore CSS bg on <table>; the td-level HTML attribute is what makes them render
+                 the image. Apple Mail, Gmail, iOS and Android read the CSS version. -->
+            <table role="presentation" width="600" border="0" cellpadding="0" cellspacing="0" style="width:600px;background-color:#0a3b5c;">
               <tr>
-                <td valign="top" style="padding:0;">
+                <td valign="top" background="https://usfq-galapagos.github.io/proyectos2026/galapagos_summer/assets/photos/sailing-duo.jpeg" bgcolor="#0a3b5c" style="padding:0;background-color:#0a3b5c;background-image:url('https://usfq-galapagos.github.io/proyectos2026/galapagos_summer/assets/photos/sailing-duo.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;">
 
-                  <!-- Dark gradient overlay faked with a tinted color block for MSO.
-                       Non-MSO clients see the image via background-image above. -->
+                  <!-- Dark tint overlay on top of the bg image so the copy stays legible. -->
                   <table role="presentation" width="600" border="0" cellpadding="0" cellspacing="0" style="width:600px;">
                     <tr>
                       <td valign="top" height="420" style="height:420px;padding:28px 32px;background-color:rgba(10,59,92,0.62);">
