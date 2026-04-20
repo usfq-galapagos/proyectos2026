@@ -1,0 +1,1199 @@
+<!DOCTYPE html><html lang="es"><head>
+
+
+
+
+<meta charset="utf-8">
+<title>USFQ Galápagos · Summer Program 2026 — Brochure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="assets/colors_and_type.css">
+
+<style>
+/* ============================================================
+   Brochure — A4 portrait, 6 pages, print-ready
+   ============================================================ */
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: #e6e8eb;
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  padding: 24px 0 60px;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto 12mm;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -20px rgba(13,59,92,0.22), 0 6px 16px rgba(13,59,92,0.08);
+  break-after: page;
+  page-break-after: always;
+}
+.page:last-child { break-after: auto; page-break-after: auto; margin-bottom: 0; }
+
+/* ------------------------------------------------------------
+   Common typography
+   ------------------------------------------------------------ */
+.page h1, .page h2, .page h3, .page h4, .page h5, .page p, .page ul, .page li {
+  margin: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10pt;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-turq-700);
+}
+
+.rule {
+  width: 44px;
+  height: 3px;
+  background: var(--gradient-brand-horizontal);
+  border-radius: 2px;
+}
+
+/* ============================================================
+   PAGE 1 — Cover
+   ============================================================ */
+.cover {
+  color: #fff;
+}
+.cover__bg {
+  position: absolute; inset: 0;
+  background-image: url('assets/photos/sailing-duo.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+.cover__scrim {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(10,59,92,0.58) 0%,
+      rgba(10,59,92,0.22) 30%,
+      rgba(10,59,92,0.55) 65%,
+      rgba(10,59,92,0.98) 100%);
+}
+.cover__frame {
+  position: absolute;
+  inset: 14mm;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 6px;
+  pointer-events: none;
+}
+.cover__top {
+  position: absolute;
+  top: 18mm; left: 18mm; right: 18mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12mm;
+}
+.cover__logo {
+  height: 22mm;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3));
+}
+.cover__tag {
+  font-family: var(--font-sans);
+  font-size: 9pt;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 999px;
+  padding: 7px 14px;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.08);
+}
+.cover__content {
+  position: absolute;
+  left: 18mm; right: 18mm;
+  bottom: 22mm;
+}
+.cover__eyebrow {
+  font-family: var(--font-display);
+  font-size: 11pt;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--color-arena);
+  margin-bottom: 10mm;
+}
+.cover__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 56pt;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 8mm;
+  text-wrap: balance;
+}
+.cover__title .sand { color: var(--color-arena); }
+.cover__sub {
+  font-family: var(--font-sans);
+  font-size: 13pt;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.92);
+  max-width: 150mm;
+  margin-bottom: 9mm;
+}
+.cover__meta {
+  display: flex;
+  gap: 8mm;
+  align-items: center;
+  color: #fff;
+  font-size: 10pt;
+  letter-spacing: 0.06em;
+}
+.cover__meta .dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--color-turq-300);
+}
+.cover__date {
+  position: absolute;
+  left: 18mm; top: 60mm;
+  font-family: var(--font-display);
+  font-size: 11pt;
+  letter-spacing: 0.3em;
+  color: #fff;
+  opacity: 0;  /* reserved */
+}
+.page-num {
+  position: absolute;
+  right: 14mm; bottom: 10mm;
+  font-family: var(--font-sans);
+  font-size: 8pt;
+  letter-spacing: 0.18em;
+  color: var(--fg-3);
+  text-transform: uppercase;
+}
+.cover .page-num {
+  color: rgba(255,255,255,0.78);
+}
+
+/* ============================================================
+   PAGE 2 — Intro / Letter
+   ============================================================ */
+.intro {
+  padding: 22mm 20mm 18mm;
+  display: flex; flex-direction: column;
+  height: 100%;
+}
+.intro__header {
+  display: flex; justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18mm;
+}
+.intro__header .brand-mark {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 9pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-azul-900);
+  font-weight: 600;
+}
+.intro__header .brand-mark::before {
+  content: ''; width: 22px; height: 22px;
+  background: var(--gradient-brand-horizontal);
+  border-radius: 50%;
+}
+.intro__header .page-tag {
+  font-size: 8pt;
+  letter-spacing: 0.2em;
+  color: var(--fg-3);
+  text-transform: uppercase;
+}
+.intro .eyebrow { margin-bottom: 6mm; }
+.intro__title {
+  font-family: var(--font-sans);
+  font-size: 34pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  margin-bottom: 8mm;
+  color: var(--color-azul-900);
+  text-wrap: balance;
+}
+.intro__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-turq-700);
+}
+.intro__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 10mm;
+  align-items: start;
+  margin-top: auto;
+}
+.intro__copy p {
+  font-size: 12pt;
+  line-height: 1.55;
+  color: var(--fg-2);
+  margin-bottom: 5mm;
+}
+.intro__copy b { color: var(--color-azul-900); font-weight: 600; }
+.intro__aside {
+  padding: 8mm;
+  background: var(--color-azul-050);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-turquesa);
+}
+.intro__aside .label {
+  font-size: 9pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-turq-700);
+  font-weight: 600;
+  margin-bottom: 3mm;
+}
+.intro__aside .stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 3mm 0;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 11pt;
+  color: var(--fg-2);
+}
+.intro__aside .stat:first-of-type { border-top: 0; }
+.intro__aside .stat b {
+  font-family: var(--font-display);
+  color: var(--color-azul-900);
+  font-size: 14pt;
+  letter-spacing: 0.04em;
+}
+.intro__photo {
+  position: absolute;
+  right: 0; top: 22mm;
+  width: 62mm; height: 85mm;
+  background-image: url('assets/photos/beach-briefing.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  display: none; /* swap on via variant */
+}
+
+/* ============================================================
+   PAGE 3 — Three pillars
+   ============================================================ */
+.pillars-page {
+  padding: 18mm 14mm 14mm;
+  display: flex; flex-direction: column;
+}
+.pillars-page__header {
+  padding: 0 4mm;
+  margin-bottom: 10mm;
+}
+.pillars-page__header .rule { margin-bottom: 6mm; }
+.pillars-page__header .eyebrow { margin-bottom: 4mm; }
+.pillars-page__header h2 {
+  font-family: var(--font-sans);
+  font-size: 28pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--color-azul-900);
+  max-width: 150mm;
+  text-wrap: balance;
+}
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3mm;
+}
+.pillar-card {
+  position: relative;
+  aspect-ratio: 1 / 2.25;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+.pillar-card img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.pillar-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(10,59,92,0.55) 0%,
+    rgba(10,59,92,0.12) 22%,
+    rgba(10,59,92,0) 42%,
+    rgba(10,59,92,0.50) 68%,
+    rgba(10,59,92,0.96) 100%);
+}
+.pillar-card__eyebrow {
+  position: absolute; top: 8mm; left: 7mm;
+  font-family: var(--font-display);
+  font-size: 10pt;
+  letter-spacing: 0.32em;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 2;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+}
+.pillar-card__body {
+  position: absolute; left: 7mm; right: 7mm; bottom: 8mm;
+  z-index: 2;
+}
+.pillar-card__title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 14pt;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 4mm;
+  text-wrap: balance;
+}
+.pillar-card__tag {
+  font-size: 8.5pt;
+  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-top: 3mm;
+  border-top: 1px solid rgba(255,255,255,0.32);
+  display: inline-block;
+}
+.pillars-page__meta {
+  margin-top: 8mm;
+  padding: 0 4mm;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6mm;
+}
+.pillars-page__meta .chip {
+  display: flex; flex-direction: column;
+  gap: 2mm;
+  padding: 5mm 0 0;
+  border-top: 1px solid var(--border-default);
+}
+.pillars-page__meta .chip .n {
+  font-family: var(--font-display);
+  font-size: 10pt;
+  letter-spacing: 0.24em;
+  color: var(--color-turq-700);
+}
+.pillars-page__meta .chip .t {
+  font-size: 10.5pt;
+  color: var(--fg-2);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   PAGE 4 — Sailing feature
+   ============================================================ */
+.sailing-page {
+  display: flex; flex-direction: column;
+  height: 100%;
+}
+.sailing-page__head {
+  padding: 18mm 20mm 8mm;
+}
+.sailing-page__head .eyebrow { margin-bottom: 4mm; }
+.sailing-page__head h2 {
+  font-family: var(--font-sans);
+  font-size: 24pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--color-azul-900);
+  margin-bottom: 5mm;
+  text-wrap: balance;
+}
+.sailing-page__head p {
+  font-size: 11.5pt;
+  line-height: 1.55;
+  color: var(--fg-2);
+  max-width: 150mm;
+}
+.sailing-hero {
+  position: relative;
+  margin: 0 14mm;
+  height: 88mm;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.sailing-hero img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.sailing-hero__caption {
+  position: absolute;
+  left: 6mm; bottom: 6mm;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(6px);
+  padding: 4mm 6mm;
+  border-radius: 999px;
+  font-size: 9pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-azul-900);
+  font-weight: 600;
+}
+.checklist {
+  padding: 10mm 20mm 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm 10mm;
+  list-style: none;
+}
+.checklist li {
+  display: flex; gap: 4mm;
+  align-items: flex-start;
+  font-size: 10.5pt;
+  color: var(--fg-2);
+  line-height: 1.45;
+}
+.checklist li svg {
+  flex: 0 0 auto;
+  width: 18px; height: 18px;
+  color: var(--color-turq-700);
+  margin-top: 1px;
+}
+.checklist li b { color: var(--color-azul-900); font-weight: 600; }
+
+.safety-strip {
+  margin: auto 20mm 18mm;
+  padding: 7mm 8mm;
+  background: var(--color-azul-900);
+  color: #fff;
+  border-radius: var(--radius-md);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6mm;
+}
+.safety-strip .ico {
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 3mm;
+}
+.safety-strip .ico svg { color: var(--color-turq-300); width: 16px; height: 16px; }
+.safety-strip h5 {
+  font-size: 10pt;
+  font-weight: 600;
+  margin-bottom: 2mm;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+.safety-strip p {
+  font-size: 9pt;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ============================================================
+   PAGE 5 — Arte + Comunidad
+   ============================================================ */
+.split-page {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+.split-block {
+  padding: 14mm 18mm;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 10mm;
+  align-items: center;
+}
+.split-block--art {
+  background: var(--color-bone);
+}
+.split-block__img {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 105mm;
+  box-shadow: var(--shadow-sm);
+}
+.split-block__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.split-block__body .eyebrow { margin-bottom: 4mm; }
+.split-block__body h3 {
+  font-family: var(--font-sans);
+  font-size: 22pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  color: var(--color-azul-900);
+  margin-bottom: 5mm;
+  text-wrap: balance;
+}
+.split-block__body p {
+  font-size: 11pt;
+  line-height: 1.55;
+  color: var(--fg-2);
+  margin-bottom: 4mm;
+}
+.split-block__body b { color: var(--color-azul-900); font-weight: 600; }
+.split-block__body ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5mm;
+  border-top: 1px solid var(--border-default);
+}
+.split-block__body li {
+  padding: 3mm 0;
+  font-size: 10pt;
+  color: var(--fg-2);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex; gap: 4mm;
+  align-items: flex-start;
+}
+.split-block__body li::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 5px; height: 5px;
+  margin-top: 8px;
+  background: var(--color-turquesa);
+  border-radius: 50%;
+}
+.split-block__body .code {
+  display: inline-block;
+  margin-top: 3mm;
+  font-family: var(--font-mono);
+  font-size: 9pt;
+  padding: 2mm 4mm;
+  background: var(--color-turq-100);
+  color: var(--color-turq-800);
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   PAGE 6 — Pricing + CTA + Contact
+   ============================================================ */
+.closing {
+  padding: 14mm 16mm 10mm;
+  display: flex; flex-direction: column;
+  height: 100%;
+}
+.closing__head {
+  margin-bottom: 6mm;
+}
+.closing__head .rule { margin-bottom: 5mm; }
+.closing__head .eyebrow { margin-bottom: 4mm; }
+.closing__head h2 {
+  font-family: var(--font-sans);
+  font-size: 28pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--color-azul-900);
+}
+.closing__head p {
+  font-size: 11pt;
+  color: var(--fg-3);
+  margin-top: 3mm;
+}
+
+.price-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+}
+.price-card__top {
+  background: var(--color-azul-050);
+  padding: 6mm 8mm;
+}
+.price-card__eyebrow {
+  font-size: 9pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-turq-700);
+  font-weight: 600;
+  margin-bottom: 5mm;
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 3mm 0;
+  border-top: 1px solid var(--border-default);
+}
+.price-row:first-of-type { border-top: 0; }
+.price-row .label b {
+  font-size: 11pt;
+  color: var(--color-azul-900);
+  font-weight: 600;
+  display: block;
+}
+.price-row .label .sub {
+  font-size: 9pt;
+  color: var(--fg-3);
+  display: block;
+  margin-top: 1mm;
+}
+.price-row .val {
+  font-family: var(--font-display);
+  font-size: 16pt;
+  letter-spacing: 0.02em;
+  color: var(--color-azul-900);
+}
+.price-row.total {
+  margin-top: 3mm;
+  padding-top: 6mm;
+  border-top: 2px solid var(--color-azul-900);
+}
+.price-row.total .val {
+  font-size: 22pt;
+  color: var(--color-turquesa);
+}
+.price-card__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #fff;
+}
+.price-card__bottom > * {
+  padding: 6mm 8mm;
+}
+.price-card__bottom .included {
+  border-right: 1px solid var(--border-subtle);
+}
+.price-card__bottom h5 {
+  font-size: 9pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-azul-900);
+  font-weight: 600;
+  margin-bottom: 4mm;
+}
+.price-card__bottom .included ul {
+  list-style: none; padding: 0;
+}
+.price-card__bottom .included li {
+  display: flex; gap: 3mm;
+  align-items: flex-start;
+  font-size: 9pt;
+  color: var(--fg-2);
+  padding: 1.5mm 0;
+  line-height: 1.35;
+}
+.price-card__bottom .included li svg {
+  flex: 0 0 auto;
+  width: 14px; height: 14px;
+  color: var(--color-turq-700);
+  margin-top: 2px;
+}
+.price-card__bottom .included li b { color: var(--color-azul-900); font-weight: 600; }
+.price-card__bottom .notincluded ul {
+  list-style: none; padding: 0;
+}
+.price-card__bottom .notincluded li {
+  display: flex; justify-content: space-between;
+  gap: 4mm;
+  font-size: 9pt;
+  color: var(--fg-2);
+  padding: 3mm 0;
+  border-bottom: 1px solid var(--border-subtle);
+  line-height: 1.4;
+}
+.price-card__bottom .notincluded li:last-child { border-bottom: 0; }
+.price-card__bottom .notincluded li span:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-right: 2mm;
+}
+.price-card__bottom .notincluded li span:last-child {
+  color: var(--color-azul-900);
+  font-weight: 500;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.cta-band {
+  margin-top: 6mm;
+  background: var(--color-azul-900);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 7mm 9mm;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 8mm;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-band::before {
+  content: '';
+  position: absolute;
+  right: -30mm; top: -30mm;
+  width: 90mm; height: 90mm;
+  background: radial-gradient(circle, rgba(0,169,168,0.28), transparent 65%);
+  pointer-events: none;
+}
+.cta-band .kicker {
+  font-size: 8.5pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-turq-300);
+  font-weight: 600;
+  margin-bottom: 4mm;
+}
+.cta-band h3 {
+  font-family: var(--font-display);
+  font-size: 20pt;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 4mm;
+}
+.cta-band p {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.82);
+}
+.cta-band__contact {
+  position: relative;
+  z-index: 1;
+}
+.cta-band__contact .row {
+  display: flex; flex-direction: column;
+  gap: 3mm;
+}
+.cta-band__contact .l {
+  font-size: 8pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-turq-300);
+  font-weight: 600;
+}
+.cta-band__contact .v {
+  font-size: 12pt;
+  color: #fff;
+  font-weight: 500;
+}
+.cta-band__contact .v a { color: #fff; text-decoration: none; }
+.cta-band__contact .v.small { font-size: 10pt; }
+
+.closing__foot {
+  margin-top: auto;
+  padding-top: 6mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8mm;
+  border-top: 1px solid var(--border-subtle);
+}
+.closing__foot img { height: 12mm; }
+.closing__foot .fine {
+  font-size: 8pt;
+  color: var(--fg-3);
+  letter-spacing: 0.06em;
+  max-width: 80mm;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* ------------------------------------------------------------
+   Print mode
+   ------------------------------------------------------------ */
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .page {
+    margin: 0;
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+  }
+}
+
+/* Screen-only print button */
+.print-helper {
+  position: fixed;
+  right: 20px; top: 20px;
+  z-index: 100;
+  background: var(--color-azul-900);
+  color: #fff;
+  border: 0;
+  font: 600 12px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+@media print { .print-helper { display: none; } }
+</style>
+</head>
+<body data-cc-id="cc-1" style="cursor: crosshair;">
+
+<button class="print-helper" onclick="window.print()">Guardar PDF ↗</button>
+
+<!-- ============================================================ -->
+<!-- PAGE 1 — COVER                                                -->
+<!-- ============================================================ -->
+<section class="page cover">
+  <div class="cover__bg"></div>
+  <div class="cover__scrim"></div>
+  <div class="cover__frame"></div>
+
+  <div class="cover__top">
+    <img class="cover__logo" src="assets/logos/usfqg-logo-white.png" alt="USFQ Galápagos">
+    <span class="cover__tag">01 — 30 Junio · 2026</span>
+  </div>
+
+  <div class="cover__content">
+    <div class="cover__eyebrow">Summer Program · San Cristóbal</div>
+    <h1 class="cover__title">Tu verano,<br><span class="sand">en el mar</span><br>en Galápagos.</h1>
+    <p class="cover__sub">
+      Seis semanas en la isla. Velerismo (deporte), cianotipia (arte) y una pasantía
+      comunitaria que deja huella — en ti y en las islas.
+    </p>
+    <div class="cover__meta">
+      <span>6 semanas</span><span class="dot"></span>
+      <span>7 créditos académicos</span><span class="dot"></span>
+      <span>San Cristóbal · Galápagos</span>
+    </div>
+  </div>
+
+  <div class="page-num">01 · Portada</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 2 — INTRO / LETTER                                       -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="intro" data-cc-id="cc-13">
+    <div class="intro__header">
+      <div class="brand-mark">USFQ Galápagos</div>
+      <div class="page-tag">Summer Program 2026</div>
+    </div>
+
+    <div class="eyebrow">La propuesta</div>
+    <h2 class="intro__title">
+      Tres experiencias.<br>
+      Un verano. <em>Muchos aprendizajes.</em>
+    </h2>
+
+    <div class="intro__grid">
+      <div class="intro__copy">
+        <p>
+          Imagina empezar el día navegando por la bahía de San Cristóbal,
+          pasar la tarde trabajando en un proyecto real de conservación marina,
+          y terminar con la cámara al hombro capturando iguanas y haciendo arte
+          con el sol en una salida de cianotipia.
+        </p>
+        <p>
+          El <b>Summer Program 2026</b> de USFQ Galápagos es exactamente eso:
+          un programa corto, intenso y muy humano, pensado para estudiantes
+          que quieren salir del aula y aprender con el mar, la roca volcánica
+          y la comunidad local como profesores.
+        </p>
+      </div>
+
+      <aside class="intro__aside">
+        <div class="label">De un vistazo</div>
+        <div class="stat"><span>Duración</span><b>6 semanas</b></div>
+        <div class="stat"><span>Créditos</span><b>7</b></div>
+        <div class="stat"><span>Cupos</span><b>10</b></div>
+        <div class="stat"><span>Sede</span><b>San Cristóbal</b></div>
+        <div class="stat"><span>Fechas</span><b>01 — 30 Jun</b></div>
+      </aside>
+    </div>
+  </div>
+  <div class="page-num">02 · Intro</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 3 — THREE PILLARS                                        -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="pillars-page">
+    <div class="pillars-page__header">
+      <div class="rule"></div>
+      <div class="eyebrow" data-cc-id="cc-1" style="">TRES EXPERIENCIAS</div>
+      <h2>Deporte, arte y comunidad — tres experiencias que se cruzan todo el programa.</h2>
+    </div>
+
+    <div class="pillars-grid">
+      <figure class="pillar-card">
+        <img src="assets/photos/dragon-sailor.jpeg" alt="Estudiante velerista">
+        <div class="pillar-card__eyebrow">Deporte</div>
+        <figcaption class="pillar-card__body">
+          <div class="pillar-card__title">Velerismo y actividades acuáticas</div>
+          <span class="pillar-card__tag">Optimist · Snorkel</span>
+        </figcaption>
+      </figure>
+
+      <figure class="pillar-card">
+        <img src="assets/photos/cyanotype-portrait.jpeg" alt="Estudiante con cianotipia">
+        <div class="pillar-card__eyebrow">Arte</div>
+        <figcaption class="pillar-card__body">
+          <div class="pillar-card__title">Fotografía, arte y mindfulness</div>
+          <span class="pillar-card__tag">Del 4 al 13 de junio</span>
+        </figcaption>
+      </figure>
+
+      <figure class="pillar-card">
+        <img src="assets/photos/community-rocks.jpeg" alt="Pasantía comunitaria">
+        <div class="pillar-card__eyebrow">Comunidad</div>
+        <figcaption class="pillar-card__body">
+          <div class="pillar-card__title">Pasantía comunitaria PASEC</div>
+          <span class="pillar-card__tag">Medio ambiente · Vinculación</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="pillars-page__meta">
+      <div class="chip">
+        <span class="n">01 — Deporte</span>
+        <span class="t">Clases con instructor certificado, snorkel en León Dormido y salvataje acuático.</span>
+      </div>
+      <div class="chip">
+        <span class="n">02 — Arte</span>
+        <span class="t">Laboratorio de cianotipia con elementos naturales recolectados en campo.</span>
+      </div>
+      <div class="chip">
+        <span class="n">03 — Comunidad</span>
+        <span class="t">Trabajo real con organizaciones aliadas en conservación y vinculación.</span>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">03 · Los tres ejes</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 4 — SAILING                                              -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="sailing-page">
+    <div class="sailing-page__head">
+      <div class="eyebrow">Clase de deporte</div>
+      <h2>Aprende a navegar en el Optimist — el velero de iniciación número uno del mundo.</h2>
+      <p>
+        Clases en bahía protegida con un instructor certificado, snorkel en León
+        Dormido y sesiones de salvataje acuático. Sin experiencia previa: solo
+        ganas de meterte al agua.
+      </p>
+    </div>
+
+    <figure class="sailing-hero">
+      <img src="assets/photos/optimist-fleet.jpeg" alt="Flota Optimist en la bahía">
+      <figcaption class="sailing-hero__caption">Flota Optimist · Bahía de San Cristóbal</figcaption>
+    </figure>
+
+    <ul class="checklist">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span><b>Clases con profesor certificado</b> en San Cristóbal — Optimist y deportes acuáticos.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span><b>Sesiones de salvataje acuático</b> y protocolos de seguridad en el agua.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span><b>Snorkel en León Dormido</b> — una de las inmersiones más emblemáticas del archipiélago.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span>Navegación con <b>doble fondo auto-vaciante</b>, protocolo de seguridad.</span>
+      </li>
+    </ul>
+
+    <div class="safety-strip">
+      <div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path></svg></div>
+        <h5>Protocolos de emergencia</h5>
+        <p>Checklists USFQ, contactos ECU 911, Capitanía de Puerto e InReach GPS satelital.</p>
+      </div>
+      <div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"></path><path d="M9 9h6v6H9z"></path></svg></div>
+        <h5>Gestión de riesgos</h5>
+        <p>Matriz con controles específicos. Navegación en bahía protegida. Límite Beaufort 4.</p>
+      </div>
+      <div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18M3 12h18"></path></svg></div>
+        <h5>Equipamiento</h5>
+        <p>Veleros con auto-vaciado, chalecos ISO 50N, VHF, botiquín estanco y cuchillo de rescate.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">04 · Velerismo</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 5 — ARTE + COMUNIDAD                                     -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="split-page">
+    <!-- Arte -->
+    <div class="split-block split-block--art">
+      <div class="split-block__img">
+        <img src="assets/photos/cyanotype-gallery.jpeg" alt="Galería de cianotipias">
+      </div>
+      <div class="split-block__body">
+        <div class="eyebrow">Clase de arte</div>
+        <h3>Explora tu creatividad en conexión con la naturaleza.</h3>
+        <p>
+          Un laboratorio de arte al aire libre: sales al campo, observas,
+          fotografías, y regresas al taller a revelar obras en <b>cianotipia</b>
+          usando elementos naturales recolectados en la isla.
+        </p>
+        <ul>
+          <li>Observación y conexión sensorial con la naturaleza.</li>
+          <li>Fotografía y exploración en campo como lenguaje creativo.</li>
+          <li>Obra final en cianotipia con elementos naturales.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Comunidad -->
+    <div class="split-block split-block--community">
+      <div class="split-block__body">
+        <div class="eyebrow">Pasantía PASEC</div>
+        <h3>Deja huella en proyectos reales de conservación y vinculación.</h3>
+        <p>
+          Trabajarás con organizaciones aliadas en el archipiélago en proyectos
+          de medio ambiente, ecosistemas costeros y desarrollo comunitario.
+          No es sombra — es trabajo que cuenta.
+        </p>
+        <span class="code">PASEC · vinculación con la comunidad</span>
+      </div>
+      <div class="split-block__img">
+        <img src="assets/photos/community-rocks.jpeg" alt="Pasantía comunitaria">
+      </div>
+    </div>
+  </div>
+  <div class="page-num">05 · Arte &amp; Comunidad</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PAGE 6 — PRICING + CTA + CONTACT                              -->
+<!-- ============================================================ -->
+<section class="page">
+  <div class="closing" data-cc-id="cc-2">
+    <div class="closing__head">
+      <div class="rule"></div>
+      <div class="eyebrow">Inversión</div>
+      <h2>Costo del programa</h2>
+      <p>7 créditos académicos incluidos · 6 semanas · Junio 2026</p>
+    </div>
+
+    <div class="price-card" data-cc-id="cc-5">
+      <div class="price-card__top">
+        <div class="price-card__eyebrow">Costo total del programa</div>
+        <div class="price-row">
+          <div class="label">
+            <b>7 créditos académicos</b>
+            <span class="sub">Tarifa regular USFQ</span>
+          </div>
+          <div class="val">$2.100</div>
+        </div>
+        <div class="price-row">
+          <div class="label">
+            <b>Fee del programa Galápagos</b>
+            <span class="sub">Incluye tour a León Dormido y materiales</span>
+          </div>
+          <div class="val">$1.000</div>
+        </div>
+        <div class="price-row total">
+          <div class="label">
+            <b>Total estudiante</b>
+            <span class="sub">6 semanas · Junio 2026</span>
+          </div>
+          <div class="val">$3.100</div>
+        </div>
+      </div>
+
+      <div class="price-card__bottom">
+        <div class="included">
+          <h5>Incluido</h5>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              <span>Tour a <b>León Dormido</b> incluido</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              <span>Materiales de arte, navegación y salidas de campo</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              <span>Alquiler de chalecos y equipamiento de seguridad</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              <span>Cena de despedida con el equipo académico</span>
+            </li>
+          </ul>
+        </div>
+        <div class="notincluded" data-cc-id="cc-3" style="">
+          <h5 data-cc-id="cc-4">No incluido — planifica aparte</h5>
+          <ul>
+            <li data-cc-id="cc-17"><span data-cc-id="cc-18">Hospedaje (6 semanas)</span><span>$900 – $1.300</span></li>
+            <li><span>Alimentación</span><span>$600 – $800</span></li>
+            <li><span>Pasaje Quito ⇄ San Cristóbal</span><span>$500</span></li>
+            <li><span>Seguro de viaje</span><span>Propio o ASERTEC</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-band" data-cc-id="cc-6">
+      <div data-cc-id="cc-15">
+        <div class="kicker" data-cc-id="cc-16" style="">Cupos limitados</div>
+        <h3 data-cc-id="cc-14">Nos vemos en<br>San Cristóbal.</h3>
+        <p data-cc-id="cc-12" style="">
+          Separa tu lugar con el equipo académico de USFQ Galápagos.
+          Te acompañamos paso a paso: inscripción, logística y lo que necesites.</p>
+      </div>
+      <div class="cta-band__contact">
+        <div class="row" data-cc-id="cc-8">
+          <div>
+            <div class="l" data-cc-id="cc-23" style="">MÁS INFORMACIÓN</div>
+            <div class="v" data-cc-id="cc-7"><a href="mailto:mzaldumbiden@usfq.edu.ec" data-cc-id="cc-22">mzaldumbiden@usfq.edu.ec</a></div>
+          </div>
+          <div>
+            <div class="l" data-cc-id="cc-9">WhatsApp</div>
+            <div class="v" data-cc-id="cc-21">+593 98 953 4852</div>
+          </div>
+          <div>
+            <div class="l" data-cc-id="cc-20">Más información</div>
+            <div class="v small" data-cc-id="cc-19">usfq.edu.ec/galapagos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="closing__foot" data-cc-id="cc-10">
+      <img src="assets/logos/usfqg-logo-primary.png" alt="USFQ Galápagos">
+      <div class="fine" data-cc-id="cc-11" style=""><br></div>
+    </div>
+  </div>
+  <div class="page-num" style="color: var(--fg-3);">06 · Inversión &amp; contacto</div>
+</section>
+
+
+
+</body></html>
